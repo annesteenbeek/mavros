@@ -49,14 +49,14 @@ private:
         const uint8_t tgt_sys_id = 0;
         const uint8_t tgt_comp_id = 0;
 
-        /* mavlink_msg_tank_level_pack_chan( */
-        /*         UAS_PACK_CHAN(uas), */
-        /*         &msg, */
-        /*         tgt_sys_id, */
-        /*         tgt_comp_id, */
-        /*         percentage, */
-        /*         raw); */
-        /* UAS_FCU(uas)->send_message(&msg); */
+        mavlink_msg_tank_level_pack_chan(
+                UAS_PACK_CHAN(uas),
+                &msg,
+                tgt_sys_id,
+                tgt_comp_id,
+                percentage,
+                raw);
+        UAS_FCU(uas)->send_message(&msg);
         }
 }; // TankLevelPlugin    
 }; // namespace mavplugin
