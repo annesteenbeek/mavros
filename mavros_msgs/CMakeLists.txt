@@ -33,6 +33,7 @@ add_message_files(
   Vibration.msg
   Waypoint.msg
   WaypointList.msg
+  TankLevel.msg
 )
 
 add_service_files(
